@@ -1,0 +1,3 @@
+<p>brands-create works!</p>
+<p *ngIf="errors">{{errors}}</p>
+<app-brands-form [brand]="brand" (someEvent)="createBrand($event)"></app-brands-form>

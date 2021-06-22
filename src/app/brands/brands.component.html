@@ -1,0 +1,22 @@
+<h1>Marques de voiture</h1>
+<p *ngIf="loading">Chargement...</p>
+<p *ngIf="errors">{{errors}}</p>
+<button (click)="create()">Créer</button>
+<ul>
+  <li *ngFor="let brand of brandList">
+    id: {{brand.id}}
+    nom: {{brand.name}}
+    description: {{brand.description}}
+    <button (click)="modify(brand)">Modifier</button>
+    <button (click)="delete(brand)">Supprimer</button>
+  </li>
+</ul>
+
+<div>
+  <app-brands-modal
+    [isShown]="isModalShown"
+    [brand]="selectedBrand"
+    (someEvent)="triggerModal()"
+  >
+  </app-brands-modal>
+</div>

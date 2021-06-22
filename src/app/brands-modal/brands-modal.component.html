@@ -1,0 +1,10 @@
+<div id="myModal" class="modal" *ngIf="isShown">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <app-brands-create *ngIf="!brand.name" [brand]="brand" (closeModal)="closeModal()"></app-brands-create>
+    <app-brands-modify *ngIf="brand.name" [brand]="brand" (closeModal)="closeModal()"></app-brands-modify>
+  </div>
+
+</div>

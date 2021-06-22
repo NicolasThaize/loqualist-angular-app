@@ -1,0 +1,19 @@
+<p>brands-form works!</p>
+<form (submit)="sendToParent()" [formGroup]="form" *ngIf="brand">
+  <label>
+    Nom
+    <input formControlName="name"
+           type="text"
+           name="name"
+           required>
+  </label>
+
+  <label>
+    Description
+    <input formControlName="description"
+           type="text"
+           name="description"
+           required>
+  </label>
+  <button>Envoyer</button>
+</form>
